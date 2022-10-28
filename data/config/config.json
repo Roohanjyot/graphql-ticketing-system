@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "/Users/rsidh/Library/CloudStorage/OneDrive-AmericanExpress/self_study/graphQL/graphql-ticketing-system/data/database.sqlite"
+  }
+}

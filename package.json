@@ -1,0 +1,33 @@
+{
+  "name": "graphql-ticketing-system",
+  "version": "1.0.0",
+  "description": "A ticketing system made to show case the capabilities of graphql",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roohanjyot/graphql-ticketing-system.git"
+  },
+  "author": "Roohanjyot S Sidhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roohanjyot/graphql-ticketing-system/issues"
+  },
+  "homepage": "https://github.com/Roohanjyot/graphql-ticketing-system#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.7.0",
+    "apollo-server": "^3.10.3",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^16.6.0",
+    "sequelize": "^6.25.3",
+    "sequelize-cli": "^6.5.2",
+    "sqlite3": "^5.1.2"
+  }
+}
