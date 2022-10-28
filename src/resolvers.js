@@ -81,6 +81,57 @@ const resolvers = {
         }
       }
     },
+    deleteUser(_, { id }, { models }) {
+      try {
+        models.User.destroy({
+          where: {
+            id
+          }
+        });
+        models.UserTickets.destroy({
+          where: {
+            userId: id
+          }
+        });
+        models.Ticket.destroy({
+          where: {
+            assignee: id
+          }
+        });
+        return {
+          code: 200,
+          success: true,
+          message: `Deleted the user at ${ id }`,
+        }
+      } catch(err) {
+        return {
+          code: 404,
+          success: false,
+          message: `Couldn't delete the user at ${ id }: ${err}`,
+        }
+      }
+    },
+    deleteTicket(_, { id }, { models }) {
+      try {
+        models.Ticket.destroy({ where: { id } })
+        models.UserTickets.destroy({
+          where: {
+            ticketId: id
+          }
+        });
+        return {
+          code: 200,
+          success: true,
+          message: `Deleted the ticket at ${ id }`,
+        }
+      } catch(err) {
+        return {
+          code: 404,
+          success: false,
+          message: `Couldn't delete the ticket at ${ id }: ${err}`,
+        }
+      }
+    },
   },
   Ticket: {
     assignee: ({ assignee } , _, { models }) => {

@@ -53,25 +53,25 @@ const typeDefs = gql`
     COMPLETED
   },
   type setUserResponse {
-    code: Int!,
-    success: Boolean!,
-    message: String!,
+    code: Int!
+    success: Boolean!
+    message: String!
     user: User
   }
   type setTicketResponse {
-    code: Int!,
-    success: Boolean!,
-    message: String!,
+    code: Int!
+    success: Boolean!
+    message: String!
     ticket: Ticket
   }
   type deleteUserResponse {
-    code: Int!,
-    success: Boolean!,
+    code: Int!
+    success: Boolean!
     message: String!
   }
   type deleteTicketResponse {
-    code: Int!,
-    success: Boolean!,
+    code: Int!
+    success: Boolean!
     message: String!
   }
 `;
